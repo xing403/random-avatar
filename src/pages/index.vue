@@ -8,7 +8,7 @@ const avatar = ref('')
 function handleChangeAvatar(e: any) {
   ElMessage.success('加载成功')
 }
-const { text, copy, isSupported } = useClipboard()
+const { text, copy, isSupported } = useClipboard({ source: avatar })
 function randomAvatar(len: number) {
   const time = new Date().getTime()
   if (time - timestamp.value <= 5000) {
